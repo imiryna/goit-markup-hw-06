@@ -616,9 +616,9 @@
           Leave your contacts and we will call you back
         </strong>
         <form class="contact-form" name="contact-form">
-          <label>
+          <div class="contact-form-box">
+           <label>
             <span class="contact-form-text">Name</span>
-            <div class="contact-form-box">
               <input 
               class="contact-form-item"
                 type="text" 
@@ -628,11 +628,11 @@
                 <svg class="contact-form-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-person"></use>
                 </svg>
-            </div>
             </label>
+          </div>
+          <div class="contact-form-box">
             <label>
               <span class="contact-form-text">Phone</span>
-              <div class="contact-form-box">
                 <input 
                 class="contact-form-item"
                 type="tel" 
@@ -642,11 +642,11 @@
                 title="xxx-xxx-xx-xx"/>
                 <svg class="contact-form-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-phone"></use>
-                </div>
             </label>
+          </div>
+          <div class="contact-form-box">
             <label>
               <span class="contact-form-text">Email</span>
-              <div class="contact-form-box">
                 <input 
                 class="contact-form-item"
                 type="email" 
@@ -654,8 +654,8 @@
                 required/>
                 <svg class="contact-form-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-email"></use>
-              </div>
             </label>
+          </div>
             <label>
               <span class="contact-form-text">Comment</span>
               <textarea
@@ -664,8 +664,8 @@
                 placeholder="Text input"
                 rows="5"></textarea>
             </label>
-            <label class="contact-form-agreement">
-               <div class="contact-form-box">
+            <div class="contact-form-box">
+              <label class="contact-form-agreement">
                 <input 
                  class="contact-form-agreement-box"
                  type="checkbox" 
@@ -683,8 +683,8 @@
                    class="contact-form-agreement-link"
                    href="">Privacy Policy</a>
                 </span>
-               </div>
-          </label>
+              </label>
+            </div>
           <button class="btn-dark btn" type="submit">Send</button>
         </form>
       </div>
