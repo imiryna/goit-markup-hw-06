@@ -600,11 +600,14 @@ body {
 .form {
   width: 260px;
   height: 40px;
+  padding-left: 55px;
+  padding-right: 55px;
 
   border: 1px solid var(--color-white);
-  /* box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15)); */
   border-radius: 4px;
   background-color: var(--color-navy-blue);
+  color: var(--color-white);
+  font-size: 14px;
 
   margin-right: 24px;
 }
@@ -627,14 +630,19 @@ body {
 }
 .button {
   display: inline-block;
-  padding: 0;
+  padding: 8px 24px;
 
   min-height: 40px;
 }
 .subscribe {
-  /* margin: ; */
+  margin-right: 10px;
 }
-/* MODAL WINDOW */
+.btn-icon {
+  width: 24px;
+  height: 24px;
+
+  fill: var(--color-white);
+}
 
 .backdrop {
   position: fixed;
@@ -647,7 +655,8 @@ body {
 
   background: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-duration),
+  transition: opacity var(--transition-duration)
+      var(--transition-timing-function),
     visibility var(--transition-duration) var(--transition-timing-function);
 }
 .backdrop.is-hidden {
@@ -748,7 +757,7 @@ body {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
-  transition: border-color var(--transition-duration)
+  transition: border var(--transition-duration)
     var(--transition-timing-function);
 
   pointer-events: none;
@@ -963,7 +972,8 @@ body {
   height: 100%;
 
   transform: translate(0, 100%);
-  transition: transform var(--transition-duration) var(--transition-duration);
+  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1)
+    var(--transition-duration);
 }
 
 .portfolio-link:hover .label,
