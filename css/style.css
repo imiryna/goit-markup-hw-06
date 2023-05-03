@@ -591,25 +591,30 @@ body {
   color: var(--color-white);
   margin-bottom: 16px;
 }
-.footer-media {
-  margin-right: 80px;
+.input {
+  margin: auto;
 }
-.form-box {
-  position: relative;
+.form-container {
+  display: flex;
+  flex-direction: row;
 }
 .form {
   width: 260px;
   height: 40px;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding: 8px 16px;
 
   border: 1px solid var(--color-white);
   border-radius: 4px;
   background-color: var(--color-navy-blue);
   color: var(--color-white);
   font-size: 14px;
+  outline: none;
 
   margin-right: 24px;
+}
+.form::placeholder {
+  font-size: 12px;
+  color: var(--color-white);
 }
 .form-text {
   font-family: var(--font-family);
@@ -629,14 +634,16 @@ body {
   z-index: 100;
 }
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   padding: 8px 24px;
+
+  /* padding: 8px 24px; */
 
   min-height: 40px;
 }
-.subscribe {
-  margin-right: 10px;
-}
+
 .btn-icon {
   width: 24px;
   height: 24px;
@@ -665,7 +672,6 @@ body {
 }
 .modal {
   width: 408px;
-  min-height: 576px;
   padding: 24px;
   padding-top: 72px;
   background-color: var(--color-dairy);
@@ -676,7 +682,7 @@ body {
 
   /* position */
   position: absolute;
-  top: 46%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 200;
@@ -719,6 +725,8 @@ body {
 
 /* FORM STYLE */
 .modal-title {
+  display: block;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -732,9 +740,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 0px;
-  gap: 8px;
 }
 .contact-form-text {
   font-family: var(--font-family);
@@ -748,6 +753,7 @@ body {
 }
 .contact-form-box {
   position: relative;
+  margin-bottom: 8px;
 }
 .contact-form-item {
   width: 360px;
@@ -756,6 +762,7 @@ body {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: none;
 
   transition: border var(--transition-duration)
     var(--transition-timing-function);
@@ -775,8 +782,7 @@ body {
   position: absolute;
   top: 50%;
   left: 16px;
-  margin: 4px;
-  transform: translateY(-55%);
+
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .contact-form-icon:hover,
@@ -785,10 +791,9 @@ body {
 }
 .textarea {
   display: block;
-  width: 360px;
+  width: 100%;
   height: 120px;
   padding: 8px 10px 16px;
-  margin-bottom: 16px;
 
   font-family: var(--font-family);
   font-weight: 400;
@@ -799,6 +804,7 @@ body {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: none;
 
   resize: none;
 
@@ -813,6 +819,10 @@ body {
 .textarea::placeholder {
   font-size: 12px;
   color: var(--color-light-slate);
+}
+.textarea-box {
+  margin-bottom: 16px;
+  width: 100%;
 }
 .contact-form-agreement {
   display: flex;
@@ -851,10 +861,10 @@ body {
   height: 8px;
 
   position: absolute;
-  top: 50%;
+  top: 4px;
   left: 3px;
 
-  transform: translateY(-55%);
+  /* transform: translateY(-50%); */
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .contact-form-agreement-link {
