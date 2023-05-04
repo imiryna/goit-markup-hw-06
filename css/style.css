@@ -569,7 +569,7 @@ body {
 .desc-dark {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.5;
   color: var(--color-white);
   background-color: #2e2f42;
   letter-spacing: 0.02em;
@@ -592,7 +592,7 @@ body {
   margin-bottom: 16px;
 }
 .input {
-  margin: auto;
+  margin-left: auto;
 }
 .form-container {
   display: flex;
@@ -662,9 +662,8 @@ body {
 
   background: rgba(46, 47, 66, 0.4);
 
-  transition: opacity var(--transition-duration)
-      var(--transition-timing-function),
-    visibility var(--transition-duration) var(--transition-timing-function);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -687,9 +686,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 200;
 
-  /* animation */
-  transition: transform var(--transition-duration)
-    var(--transition-timing-function);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn {
   padding: 0;
@@ -770,10 +767,12 @@ body {
   pointer-events: none;
 }
 .contact-form-item:hover,
-.contact-form-item:focus {
+.contact-form-item:focus ~ .contact-form-icon {
   border-color: var(--color-iris);
   border-radius: 4px;
+  fill: var(--color-iris);
 }
+
 .contact-form-icon {
   display: block;
   width: 18px;
